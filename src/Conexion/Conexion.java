@@ -16,11 +16,7 @@ public class Conexion {
     private Connection con = null;
     
     //public Conexion(){}
-    
-    public void hola(){
-        System.out.println("hola");
-    }
-    
+        
     public Connection getConection(){
         try{
             Class.forName("com.mysql.jdbc.Driver");
