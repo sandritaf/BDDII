@@ -21,6 +21,7 @@ public class GestionCalificaciones {
         
         Menu ventana = new Menu();
         ventana.setVisible(true);
+        System.out.println("Hola Mundo");
     }
     
 }
