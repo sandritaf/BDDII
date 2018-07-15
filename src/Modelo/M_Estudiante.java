@@ -1,13 +1,11 @@
 package Modelo;
 
 public class M_Estudiante {
-    private int idAutor;
     private String nombre;
     private String apellido;
     private String carrera;
     private String semestre;
     private String cedula;
-    private int idEmpresa;
 
     public M_Estudiante() {
     }
@@ -18,10 +16,6 @@ public class M_Estudiante {
         this.carrera = carrera;
         this.semestre = semestre;
         this.cedula = cedula;
-    }
-
-    public int getIdAutor() {
-        return idAutor;
     }
 
     public String getNombre() {
@@ -43,14 +37,6 @@ public class M_Estudiante {
     public String getCedula() {
         return cedula;
     }
-
-    public int getIdEmpresa() {
-        return idEmpresa;
-    }
-    
-    
-    
-    
     
     
 }

@@ -126,7 +126,8 @@
                   <Component id="btn3" alignment="0" max="32767" attributes="0"/>
                   <Component id="btn6" alignment="0" max="32767" attributes="0"/>
                   <Component id="btn5" alignment="0" max="32767" attributes="0"/>
-                  <Component id="btn4" alignment="0" max="32767" attributes="0"/>
+                  <Component id="btnEmpresa" alignment="0" max="32767" attributes="0"/>
+                  <Component id="btn7" alignment="0" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
@@ -143,8 +144,10 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="btn6" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="btn4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="145" max="32767" attributes="0"/>
+                      <Component id="btnEmpresa" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="btn7" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="79" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -289,24 +292,24 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="btn4">
+            <Container class="javax.swing.JPanel" name="btnEmpresa">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="20" green="2d" red="d6" type="rgb"/>
+                  <Color blue="a6" green="a5" red="95" type="rgb"/>
                 </Property>
                 <Property name="name" type="java.lang.String" value="btn6" noResource="true"/>
               </Properties>
               <Events>
-                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn4MousePressed"/>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnEmpresaMousePressed"/>
               </Events>
 
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                          <Component id="jLabel6" min="-2" pref="238" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jLabel6" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -327,12 +330,15 @@
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/Recursos/configuracion50.png"/>
+                      <Image iconType="3" name="/Recursos/Empresa.png"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Configuraci&#xf3;n"/>
+                    <Property name="text" type="java.lang.String" value="Empresa"/>
                     <Property name="horizontalTextPosition" type="int" value="4"/>
                     <Property name="verticalTextPosition" type="int" value="3"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jLabel6MouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -422,6 +428,53 @@
                       <Image iconType="3" name="/Recursos/estudiantebirrete50.png"/>
                     </Property>
                     <Property name="text" type="java.lang.String" value="Gestionar Alumnos"/>
+                    <Property name="horizontalTextPosition" type="int" value="4"/>
+                    <Property name="verticalTextPosition" type="int" value="3"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="btn7">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="20" green="2d" red="d6" type="rgb"/>
+                </Property>
+                <Property name="name" type="java.lang.String" value="btn6" noResource="true"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btn7MousePressed"/>
+              </Events>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                          <Component id="jLabel9" min="-2" pref="238" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jLabel9" alignment="1" pref="55" max="32767" attributes="0"/>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="jLabel9">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Latha" size="18" style="1"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/Recursos/configuracion50.png"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Configuraci&#xf3;n"/>
                     <Property name="horizontalTextPosition" type="int" value="4"/>
                     <Property name="verticalTextPosition" type="int" value="3"/>
                   </Properties>
