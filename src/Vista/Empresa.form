@@ -116,7 +116,7 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/Recursos/Empresa.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Gestionar Defensa"/>
+            <Property name="text" type="java.lang.String" value="Gestionar Empresa"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -268,9 +268,6 @@
             </Component>
             <Component class="javax.swing.JTextField" name="txtNombre">
               <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Century Gothic" size="14" style="0"/>
                 </Property>
