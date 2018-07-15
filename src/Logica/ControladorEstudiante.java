@@ -4,6 +4,7 @@ import Conexion.Conexion;
 import Modelo.M_Estudiante;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import javax.swing.JOptionPane;
 
 
@@ -12,6 +13,37 @@ public class ControladorEstudiante {
     public ControladorEstudiante() {
     }
     
+    //Comprueba si una cedula ya existe en la tabla estudiante
+    public boolean idExiste(String cedula_alumno){
+        boolean bandera = false;
+        try {
+            Conexion conn = new Conexion();
+            Connection con = conn.getConection();
+            PreparedStatement ps;
+            ResultSet rs;
+            
+            ps = con.prepareStatement("SELECT cedula FROM estudiante WHERE cedula = ?");
+             
+            ps.setString(1, cedula_alumno);
+            
+            rs = ps.executeQuery();
+                        
+            if(rs.next()){
+                bandera = true;
+            }
+            
+            ps.close();
+            rs.close();
+            conn.CerrarConexion();
+            con.close();
+            
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "Ocurrió un error");
+        }
+        return bandera;
+    }
+    
+    //Ingresa un estudiante en la tabla
     public void ingresar(M_Estudiante alumno){
         try {
                 Conexion conn = new Conexion();
@@ -44,15 +76,16 @@ public class ControladorEstudiante {
             }
     }
     
-    public void eliminar(String cedula_alumno){
+    //Dada una clave primaria, se elimina un estudiante
+    public void eliminar(String pk_alumno){
         
         try {
             Conexion c = new Conexion();
             Connection con = c.getConection();
-            String cedula = cedula_alumno;      
+            String pk = pk_alumno;      
             PreparedStatement ps;
             
-            ps = con.prepareStatement("DELETE FROM estudiante WHERE cedula="+cedula);
+            ps = con.prepareStatement("DELETE FROM estudiante WHERE idestudiante="+pk);
                         
             int res = ps.executeUpdate();
             
@@ -71,11 +104,12 @@ public class ControladorEstudiante {
         }
     }
     
-    public void modificar(int pk_alumno, String cedula, String nombre, String apellido, String carrera, int semestre){
+    //Se modifican datos de un estudiante dada su clave primaria, validar que no se ingresan 2 cedulas iguales
+    public void modificar(String pk_alumno, String cedula, String nombre, String apellido, String carrera, String semestre){
         try {
             Conexion c = new Conexion();
             Connection con = c.getConection();
-            int pk = pk_alumno;
+            int pk = Integer.parseInt(pk_alumno);
             PreparedStatement ps;
             
             ps = con.prepareStatement("UPDATE estudiante SET cedula=?,nombre=?,apellido=?,semestre=?,carrera=?" +
@@ -84,9 +118,9 @@ public class ControladorEstudiante {
             ps.setString(1, cedula); 
             ps.setString(2, nombre); 
             ps.setString(3, apellido); 
-            ps.setInt(4, semestre); 
+            ps.setInt(4, Integer.parseInt(semestre)); 
             ps.setString(5,carrera);
-            ps.setInt(5,pk);
+            ps.setInt(6,pk);
             
             int res = ps.executeUpdate();
             
@@ -104,5 +138,6 @@ public class ControladorEstudiante {
              JOptionPane.showMessageDialog(null, "Ocurrió un error: "+e);
         }
     }
+    
     
 }
