@@ -6,7 +6,6 @@
 package Main;
 
 import Vista.Menu;
-import Vista.Menu;
 
 /**
  *
@@ -21,7 +20,7 @@ public class GestionCalificaciones {
         
         Menu ventana = new Menu();
         ventana.setVisible(true);
-        System.out.println("Hola Mundo");
+        System.out.println("Hola Mundooooooooooooo");
     }
     
 }
